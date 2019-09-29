@@ -64,7 +64,7 @@ with open(r'G:\NLP\files.csv','rt')as f:
 a = [[0 for x in range(len(rows))] for x in range(len(columns))]
 for i in range(len(rows)):
     for j in range(len(columns)):
-        a[i][j]=cosine_sim(rows[i],columns[j])
+        a[j][i]=cosine_sim(rows[i],columns[j])
 
 df = pd.DataFrame(a)
 df.to_csv(r'G:\NLP\data.csv', index=False)
